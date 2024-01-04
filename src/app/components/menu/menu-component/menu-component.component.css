@@ -1,0 +1,12 @@
+/* sidebar.component.css */
+.expanded {
+  width: 240px; /* Ajusta el ancho según tus necesidades */
+}
+
+.collapsed {
+  width: 60px; /* Ajusta el ancho según tus necesidades */
+}
+
+button {
+  transition: transform 0.3s ease-in-out;
+}
