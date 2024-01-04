@@ -10,6 +10,7 @@ import { CreateHistoryComponent } from './components/createHistory/create-histor
 export const routes: Routes = [
 
   // {path: '**', pathMatch: 'full', redirectTo: 'login'},
+  {path: '', component:LoginComponent},
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'home', component:HomeComponent},
