@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuComponent } from "../../components/menu/menu-component/menu-component.component";
-import { PrestamosComponent } from '../prestamos/prestamos.component';
+import { PrestamosComponent } from '../../components/prestamos/prestamos/prestamos.component';
 
 
 @Component({

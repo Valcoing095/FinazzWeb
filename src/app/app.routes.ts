@@ -4,8 +4,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { EditProfileComponentComponent } from './components/editProfile/edit-profile-component/edit-profile-component.component';
-import { CreateHistoryComponent } from './components/createHistory/create-history-component/create-history-component.component';
 import { CreateClientComponent } from './components/clients/create-client/create-client.component';
+import { CrearPrestamoComponent } from './components/prestamos/crear-prestamo/crear-prestamo.component';
 
 
 export const routes: Routes = [
@@ -17,6 +17,6 @@ export const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'edit/profile', component: EditProfileComponentComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'create/history', component: CreateHistoryComponent},
+  {path: 'create/prestamo', component: CrearPrestamoComponent},
   {path: 'create/client', component: CreateClientComponent}
 ];

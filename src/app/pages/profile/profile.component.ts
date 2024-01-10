@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from "../home/home.component";
 import { Router } from '@angular/router';
-import { PrestamosComponent } from '../prestamos/prestamos.component';
+import { PrestamosComponent } from '../../components/prestamos/prestamos/prestamos.component';
 
 @Component({
     selector: 'app-profile',

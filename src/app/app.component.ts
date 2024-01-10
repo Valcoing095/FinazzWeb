@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MenuComponent } from "./components/menu/menu-component/menu-component.component";
 import { HttpClientModule } from '@angular/common/http';
-import { PrestamosComponent } from './pages/prestamos/prestamos.component';
+import { PrestamosComponent } from './components/prestamos/prestamos/prestamos.component';
+
 @Component({
     selector: 'app-root',
     standalone: true,

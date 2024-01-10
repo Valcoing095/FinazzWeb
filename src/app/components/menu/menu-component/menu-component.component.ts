@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
-import { PrestamosComponent } from '../../../pages/prestamos/prestamos.component';
+import { PrestamosComponent } from '../../prestamos/prestamos/prestamos.component';
 
 @Component({
   selector: 'app-menu-component',
@@ -21,8 +21,8 @@ export class MenuComponent{
     this.router.navigate(["login"])
   }
 
-  openViewHistory(){
-    this.router.navigate(["create/history"])
+  createPrestamo(){
+    this.router.navigate(["create/prestamo"])
   }
 
   openViewProfile(){
