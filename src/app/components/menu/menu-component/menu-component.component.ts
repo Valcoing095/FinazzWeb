@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
-import { HistoryComponent } from '../../../pages/history/history.component';
-
+import { PrestamosComponent } from '../../../pages/prestamos/prestamos.component';
 
 @Component({
   selector: 'app-menu-component',
   standalone: true,
-  imports: [RouterOutlet,HistoryComponent],
+  imports: [RouterOutlet,PrestamosComponent],
   templateUrl: './menu-component.component.html',
   styleUrl: './menu-component.component.css'
 })
 export class MenuComponent{
-  constructor(private router:Router){
+  constructor(private router:Router){}
 
+
+  createClient() {
+    this.router.navigate(["create/client"])
   }
   cerrarSesion(){
     this.router.navigate(["login"])

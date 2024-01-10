@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuComponent } from "../../components/menu/menu-component/menu-component.component";
-import { HistoryComponent } from '../history/history.component';
+import { PrestamosComponent } from '../prestamos/prestamos.component';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { HistoryComponent } from '../history/history.component';
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [MenuComponent,HistoryComponent]
+    imports: [MenuComponent,PrestamosComponent]
 })
 export class HomeComponent {
 
