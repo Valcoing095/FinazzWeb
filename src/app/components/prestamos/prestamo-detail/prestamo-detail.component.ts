@@ -9,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class PrestamoDetailComponent {
 
+  public isOpen = false;
+
+  openModal(): void {
+    this.isOpen = true;
+    
+  }
+
+  closeModal(): void {
+    this.isOpen = false;
+  }
 }
