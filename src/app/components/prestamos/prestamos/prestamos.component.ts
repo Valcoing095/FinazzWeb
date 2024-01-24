@@ -1,7 +1,5 @@
-import { Component,OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { PrestamoServiceService } from '../../../prestamos/prestamo-service.service'
+import { Component,EventEmitter,OnInit } from '@angular/core';
+import { PrestamoServiceService } from '../../../services/prestamos/prestamo-service.service'
 
 @Component({
   selector: 'app-prestamos',
@@ -13,7 +11,11 @@ import { PrestamoServiceService } from '../../../prestamos/prestamo-service.serv
 export class PrestamosComponent implements OnInit {
 
   constructor( private servicePrestamo:PrestamoServiceService){}
+
+    dataPrestamo = new EventEmitter<any>();
+
   prestamos :any
+
   ngOnInit(): void {
     this.servicePrestamo.getData()
     .then(res=>{
@@ -22,4 +24,7 @@ export class PrestamosComponent implements OnInit {
     })
   }
 
+  detailPrestamo($data:any){
+    this.dataPrestamo.emit($data);
+  }
 }
