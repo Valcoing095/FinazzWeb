@@ -11,7 +11,7 @@ import { PrestamoDetailComponent } from './components/prestamos/prestamo-detail/
 
 export const routes: Routes = [
 
-  // {path: '**', pathMatch: 'full', redirectTo: 'login'},
+  // {path: '**', pathMatch: 'full', redirectTo: 'login'},https://la.spankbang.com/93fqj/video/my+teacher+can+t+say+no+part+2
   {path: '', component:LoginComponent},
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegisterComponent},

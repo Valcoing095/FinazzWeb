@@ -1,29 +1,26 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class PrestamoServiceService {
+export class ClientsService {
 
   constructor(private http:HttpClient) { }
 
-
-  async getData(): Promise<any> {
+  async getClients():Promise<any>{
     return new Promise((resolve)=>{
-      const url = 'https://rickandmortyapi.com/api/character/?page=19';
+      const url = 'localhost:3000/api/v1/clients';
       this.http.get(url).subscribe((response)=>{
 
         if(!response){
-          alert("Ha ocurrido un error")
+          alert("Ha ocurrido un error");
         }
         resolve(response)
       },async(error)=>{
         resolve(error.error)
       })
-    }).catch(error => {
-      // Imprimo el error
-      console.error(error);
-    });
+    }).catch(error=>{
+      console.log(error)
+    })
   }
 }
