@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_INLAZEBACK: 'http://localhost:3000/api/v1/',
+  API_Finanzz_Back: 'http://localhost:3000/api/v1',
 };
 
 /*

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MenuComponent } from "./components/menu/menu-component/menu-component.component";
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PrestamosComponent } from './components/prestamos/prestamos/prestamos.component';
 
 @Component({
@@ -10,7 +11,7 @@ import { PrestamosComponent } from './components/prestamos/prestamos/prestamos.c
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, MenuComponent,PrestamosComponent,HttpClientModule]
+    imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterOutlet, MenuComponent,PrestamosComponent,HttpClientModule]
 })
 export class AppComponent {
   title = 'inlazeFriendsWeb';
