@@ -26,10 +26,10 @@ export class LoginComponent {
     subscribe(
       (res:any)=>{
       if(res){
-        console.log(res.data[0])
+        console.log(res.access_token)
         Swal.fire({
           icon: "success",
-          title: `Bienvenido ${res.data[0].user_name}`,
+          title: `Bienvenido`,
         });
         this.router.navigate(['home']);
       }
