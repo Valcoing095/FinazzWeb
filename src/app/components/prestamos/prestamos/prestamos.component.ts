@@ -21,6 +21,7 @@ export class PrestamosComponent implements OnInit{
     this.prestamosService.getClients().subscribe({
       next: (result) => {
         this.listPrestamos = result
+        console.log(this.listPrestamos)
       },
       error: (err)=>{
         console.log(err)

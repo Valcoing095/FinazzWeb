@@ -3,17 +3,17 @@
       <div class="mb-16 md:w-2/3 lg:w-1/2">
         <h2 class="mb-4 text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
           Prestamos
-        </h2>  
+        </h2>
       </div>
 
         @for( prestamo of listPrestamos; track $index ){
           <div class="grid grid-cols-2 pl-4 gap-4 mb-2 bg-sky-500/75 h-20 rounded-[20px]">
               <div class="pt-1 pr-4">
-                <h4 class="text-xl font-semibold dark:text-gray-700 text-white">Nombre</h4>
+                <h4 class="text-xl font-semibold dark:text-gray-700 text-white">{{prestamo["nombre_completo"]}}</h4>
                 <span class="block text-sm text-gray-500">Numero de celular:  {{prestamo["celular"]}}</span>
               </div>
               <div class="sm:text-gray-300 dark:text-gray-600 sm:text-sm pt-7 pl-8">
-                <p>Saldo 
+                <p>Saldo
                   <a href="prestamos/detail" class="px-2 py-1 text-sm text-yellow-600 font-semibold rounded-full hover:text-white hover:bg-yellow-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2">Mas</a>
                 </p>
               </div>
@@ -21,4 +21,3 @@
         }
     </div>
   </div>
-  
