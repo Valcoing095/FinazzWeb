@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientService } from '../../../services/client-service.service';
+import { ClientService } from '../../../services/clientes/client-service.service';
 
 @Component({
   selector: 'app-crear-prestamo',

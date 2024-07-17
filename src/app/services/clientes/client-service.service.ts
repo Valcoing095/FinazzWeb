@@ -6,12 +6,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ClientService {
-  
-  API_URL : string = 'http://localhost:3000/api/v1/clients'
+
+  API_URL : string = 'http://localhost:4000/api/v1/clients'
   constructor( private httpClient:HttpClient) { }
 
   getClients(): Observable<any>{
     return this.httpClient.get(this.API_URL).pipe(res=>res)
+  }
+
+  createClients(data:any): Observable<any>{
+    return this.httpClient.post(`${this.API_URL}/create/client`,data).pipe(res=>res)
   }
 
 }
