@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientService {
-
-  API_URL : string = 'http://localhost:4000/api/v1/clients'
+  API_URL :string = `${environment.API_Finanzz_Back}/clients` //url base para el consumo de API 
   constructor( private httpClient:HttpClient) { }
 
   getClients(): Observable<any>{
