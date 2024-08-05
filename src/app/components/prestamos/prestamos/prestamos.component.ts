@@ -17,15 +17,20 @@ export class PrestamosComponent implements OnInit{
     this.getPrestamos()
   }
 
+
+  /**
+   * @type {array}
+   * Description: se trae toda la información de los prestamos asociados a un usuario.
+  */
   getPrestamos(){
-    this.prestamosService.getClients().subscribe({
-      next: (result) => {
-        this.listPrestamos = result
-        console.log(this.listPrestamos)
-      },
-      error: (err)=>{
-        console.log(err)
-      }
-    })
+    // this.prestamosService.getClients().subscribe({
+    //   next: (result) => {
+    //     this.listPrestamos = result
+    //     console.log(this.listPrestamos)
+    //   },
+    //   error: (err)=>{
+    //     console.log(err)
+    //   }
+    // })
   }
 }

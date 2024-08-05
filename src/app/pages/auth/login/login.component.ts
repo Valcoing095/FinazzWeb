@@ -26,7 +26,7 @@ export class LoginComponent {
     subscribe(
       (res:any)=>{
       if(res){
-        console.log(res.access_token)
+        
         Swal.fire({
           icon: "success",
           title: `Bienvenido`,

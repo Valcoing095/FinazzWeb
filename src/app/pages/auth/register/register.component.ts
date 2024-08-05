@@ -5,6 +5,7 @@ import { environment } from './../../../../environments/environment';
 import { authService } from '../../../services/auth/auth-service.service'
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -36,7 +37,12 @@ export class RegisterComponent implements OnInit{
         this.router.navigate(['login']);
       },
       err=>{
-        console.log(err);
+        Swal.fire({
+          icon: "error",
+          title: "Ha ocurrido un error",
+          text: err.error.message,
+          footer: '<a href="" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Iniciar sesion</a>'
+        });
       }
     )
   }
