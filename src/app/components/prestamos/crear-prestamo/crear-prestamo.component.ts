@@ -17,7 +17,7 @@ export class CrearPrestamoComponent implements OnInit{
   ngOnInit(): void {
     this.getClients()
   }
-
+  // Se crea formulario con los clientes ya ceados a los que se les va a realizar el prestamo
   getClients(){
     this.clientService.getClients().subscribe({
       next:(result)=>{
@@ -27,6 +27,10 @@ export class CrearPrestamoComponent implements OnInit{
         console.log(err)
       }
     })
+  }
+
+  createPrestamos(){
+
   }
 
 }

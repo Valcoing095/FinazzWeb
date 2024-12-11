@@ -21,26 +21,6 @@ export class LoginComponent {
   });
 
   logIn():void{
-    console.log(this.formAuth.value)
-    this.authServiceClient.logIn(this.formAuth.value).
-    subscribe(
-      (res:any)=>{
-      if(res){
-        console.log(res.access_token)
-        Swal.fire({
-          icon: "success",
-          title: `Bienvenido`,
-        });
-        this.router.navigate(['home']);
-      }
-    },err=>{
-      Swal.fire({
-        icon: "error",
-        title: "Ha ocurrido un error",
-        text: err.error.message,
-        footer: '<a href="/register" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Registrarse</a>'
-      });
-    }
-  )
+    this.router.navigate(['home'])
   }
 }
