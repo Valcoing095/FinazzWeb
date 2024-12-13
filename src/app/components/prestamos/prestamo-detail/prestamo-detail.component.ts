@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-prestamo-detail',
@@ -9,6 +10,7 @@ import { Component } from '@angular/core';
 })
 export class PrestamoDetailComponent {
 
+  constructor(private route: Router) { }
   public isOpen = false;
 
   openModal(): void {
@@ -18,5 +20,9 @@ export class PrestamoDetailComponent {
 
   closeModal(): void {
     this.isOpen = false;
+  }
+
+  newPrestamo():void{
+    this.route.navigate(["create/prestamo"])
   }
 }
