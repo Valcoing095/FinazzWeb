@@ -21,6 +21,7 @@ export class LoginComponent {
   });
 
   logIn():void{
+<<<<<<< HEAD
     console.log(this.formAuth.value)
     this.authServiceClient.logIn(this.formAuth.value).
     subscribe(
@@ -42,5 +43,8 @@ export class LoginComponent {
       });
     }
   )
+=======
+    this.router.navigate(['home'])
+>>>>>>> dev-front
   }
 }

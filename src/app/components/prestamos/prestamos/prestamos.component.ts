@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../../services/clientes/client-service.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-prestamos',
   standalone: true,
@@ -12,7 +12,7 @@ export class PrestamosComponent implements OnInit{
   listPrestamos = []
 
 
-  constructor(private prestamosService: ClientService){}
+  constructor(private prestamosService: ClientService, private router:Router){}
   ngOnInit(): void {
     this.getPrestamos()
   }
@@ -32,5 +32,9 @@ export class PrestamosComponent implements OnInit{
     //     console.log(err)
     //   }
     // })
+  }
+
+  prestamoDetail(){
+    this.router.navigate(['prestamos/detail'])
   }
 }
