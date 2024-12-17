@@ -23,13 +23,17 @@
                     </div>
                 </div>
 
+                <!-- Etiqueta de fondo -->
                 <label role="button" for="toggle_nav"
-                    class="hidden peer-checked:block fixed w-full h-full left-0 top-0 z-10 bg-yellow-200 dark:bg-black dark:bg-opacity-80 bg-opacity-30 backdrop-blur backdrop-filter"></label>
+                class="hidden peer-checked:block fixed w-full h-full left-0 top-0 z-10 bg-yellow-200 dark:bg-black dark:bg-opacity-80 bg-opacity-30 backdrop-blur backdrop-filter"></label>
+
+                <!-- Contenedor principal -->
                 <div
-                    class="hidden peer-checked:flex w-full flex-col lg:flex lg:flex-row justify-end z-30 items-center gap-y-6 p-6 rounded-xl bg-white dark:bg-gray-900 lg:gap-y-0 lg:p-0 md:flex-nowrap lg:bg-transparent lg:w-7/12">
+                    class="hidden peer-checked:flex w-full flex-col lg:flex-row justify-end z-30 items-center gap-y-6 p-6 rounded-xl bg-white dark:bg-gray-900 lg:gap-y-0 lg:p-0 lg:bg-transparent lg:w-7/12">
+
+                    <!-- Perfil -->
                     <div class="text-gray-600 lg:pr-4 w-full">
-                        <ul class="tracking-wide font-medium  text-sm
-                      flex flex-col gap-y-6 lg:gap-y-0 lg:flex-row w-full">
+                        <ul class="tracking-wide font-medium text-sm flex flex-col gap-y-6 lg:flex-row lg:gap-y-0 w-full">
                             <li>
                                 <a href="/profile"
                                     class="block md:px-4 transition dark:text-gray-300 dark:hover:text-yellow-300 hover:text-yellow-700">
@@ -39,24 +43,24 @@
                         </ul>
                     </div>
 
-
-                    <div class="w-full min-w-max space-y-4 border-yellow-200 lg:space-y-0 sm:w-max lg:border-l dark:lg:border-gray-700 py-2">
+                    <!-- Botones -->
+                    <div class="w-full flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4 border-yellow-200 lg:border-l dark:lg:border-gray-700 py-2">
                         <button type="button" (click)="createPrestamo()"
-                            class="w-full py-3 px-6 text-center rounded-full transition active:bg-yellow-200 dark:active:bg-gray-700 dark:focus:bg-gray-800 focus:bg-yellow-100 sm:w-max">
+                            class="w-full lg:w-max py-3 px-6 text-center rounded-full transition active:bg-yellow-200 dark:active:bg-gray-700 dark:focus:bg-gray-800 focus:bg-yellow-100">
                             <span class="block text-yellow-800 dark:text-white font-semibold text-sm">
-                               Crear prestamo
+                                Crear prestamo
                             </span>
                         </button>
                         <button type="button" (click)="createClient()"
-                            class="w-full py-3 px-6 text-center rounded-full transition active:bg-yellow-200 dark:active:bg-gray-700 dark:focus:bg-gray-800 focus:bg-yellow-100 sm:w-max">
+                            class="w-full lg:w-max py-3 px-6 text-center rounded-full transition active:bg-yellow-200 dark:active:bg-gray-700 dark:focus:bg-gray-800 focus:bg-yellow-100">
                             <span class="block text-yellow-800 dark:text-white font-semibold text-sm">
-                               Crear cliente
+                                Crear cliente
                             </span>
                         </button>
-                        <button type="button" (click)="cerrarSesion()" title="Start buying"
-                            class="w-full py-3 px-6 text-center rounded-full transition bg-yellow-300 hover:bg-yellow-100 active:bg-yellow-400 focus:bg-yellow-300 sm:w-max mr-5">
+                        <button type="button" (click)="cerrarSesion()" title="Cerrar sesión"
+                            class="w-full lg:w-max py-3 px-6 text-center rounded-full transition bg-yellow-300 hover:bg-yellow-100 active:bg-yellow-400 focus:bg-yellow-300">
                             <span class="block text-yellow-900 font-semibold text-sm">
-                                Cerrar sesion
+                                Cerrar sesión
                             </span>
                         </button>
                     </div>
