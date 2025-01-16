@@ -1,69 +1,53 @@
-<nav class="fixed z-10 w-full bg-white dark:bg-transparent md:absolute md:bg-transparent">
-    <div class="container   md:px-12 lg:px-7">
-        <div class="flex flex-wrap items-center justify-between py-3 gap-6 md:py-4 md:gap-0">
-            <input type="checkbox" name="toggle_nav" id="toggle_nav" class="peer hidden">
-            <div class="w-full  flex justify-between lg:w-max md:px-0 z-30">
-                <a href="#" aria-label="logo" class="flex space-x-2 items-center">
-                    <img class="mx-auto h-10 w-auto" src="img1.png">
-                    <span class="text-2xl font-bold text-yellow-900">Finazz<span
-                            class="text-yellow-700 ">Web</span></span>
-                </a>
 
-                <div class="flex items-center lg:hidden max-h-10">
-                    <label role="button" for="toggle_nav" aria-label="humburger" id="hamburger"
-                        class="relative w-10 h-auto p-2">
-                        <div id="line"
-                            class="m-auto h-0.5 w-6 rounded bg-yellow-900 transition duration-300">
-                        </div>
-                        <div id="line2"
-                            class="m-auto mt-2 h-0.5 w-6 rounded bg-yellow-900 transition duration-300">
-                        </div>
-                    </label>
-                </div>
-            </div>
 
-            <!-- Etiqueta de fondo -->
-            <label role="button" for="toggle_nav"
-            class="hidden peer-checked:block fixed w-full h-full left-0 top-0 z-10 bg-yellow-200 dark:bg-black dark:bg-opacity-80 bg-opacity-30 backdrop-blur backdrop-filter"></label>
-
-            <!-- Contenedor principal -->
-            <div
-                class="hidden peer-checked:flex w-full flex-col lg:flex-row justify-end z-30 items-center gap-y-6 p-6 rounded-xl bg-white dark:bg-gray-900 lg:gap-y-0 lg:p-0 lg:bg-transparent lg:w-7/12">
-
-                <!-- Perfil -->
-                <div class="text-gray-600 lg:pr-4 w-full">
-                    <ul class="tracking-wide font-medium text-sm flex flex-col gap-y-6 lg:flex-row lg:gap-y-0 w-full">
-                        <li>
-                            <a href="/profile"
-                                class="block md:px-4 transition dark:text-gray-300 dark:hover:text-yellow-300 hover:text-yellow-700">
-                                <span>Mi perfil</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Botones -->
-                <div class="w-full flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4 border-yellow-200 lg:border-l dark:lg:border-gray-700 py-2">
-                    <button type="button" (click)="createPrestamo()"
-                        class="w-full lg:w-max py-3  text-center rounded-full transition active:bg-yellow-200 dark:active:bg-gray-700 dark:focus:bg-gray-800 focus:bg-yellow-100">
-                        <span class="block text-yellow-800 dark:text-white font-semibold text-sm">
-                            Crear prestamo
-                        </span>
-                    </button>
-                    <button type="button" (click)="createClient()"
-                        class="w-full lg:w-max py-3  text-center rounded-full transition active:bg-yellow-200 dark:active:bg-gray-700 dark:focus:bg-gray-800 focus:bg-yellow-100">
-                        <span class="block text-yellow-800 dark:text-white font-semibold text-sm">
-                            Crear cliente
-                        </span>
-                    </button>
-                    <button type="button" (click)="cerrarSesion()" title="Cerrar sesión"
-                        class="w-full lg:w-max py-3  text-center rounded-full transition bg-yellow-300 hover:bg-yellow-100 active:bg-yellow-400 focus:bg-yellow-300">
-                        <span class="block text-yellow-900 font-semibold text-sm">
-                            Cerrar sesión
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </div>
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="/home" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Finnazz Web</span>
+  </a>
+  <div class="flex md:order-2">
+    <div class="relative hidden md:block">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+        <span class="sr-only">Search icon</span>
+      </div>
+      <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
     </div>
+    <button  (click)="openModal()" data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+   <!-- Modal (condicional) -->
+   @if (isOpen) {
+    <div class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+      <!-- Botón en la esquina superior derecha -->
+      <button
+        (click)="closeModal()"
+        type="button"
+        class="absolute top-4 right-4 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 focus:outline-none"
+        aria-label="Open main menu">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+
+      <!-- Contenedor del modal -->
+      <div class="bg-white p-6 rounded-md shadow-lg w-full h-full max-w-4xl flex flex-col justify-center items-center">
+        <h1 class="text-2xl font-bold mb-4 text-center">Opciones</h1>
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" (click)="createClient()">Crear cliente</button>
+        <button class="mt-4 w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-gray-200"  (click)="createPrestamo()">Crear préstamo</button>
+        <button class="mt-4 w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-gray-200">Cerrar Sesion</button>
+      </div>
+    </div>
+
+  }
+
+  </div>
 </nav>

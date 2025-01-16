@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../../services/clientes/client-service.service';
 import { FormControl,FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MenuComponent } from '../../menu/menu-component/menu-component.component';
 
 @Component({
   selector: 'app-crear-prestamo',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,MenuComponent],
   templateUrl: './crear-prestamo.component.html',
   styleUrl: './crear-prestamo.component.css'
 })

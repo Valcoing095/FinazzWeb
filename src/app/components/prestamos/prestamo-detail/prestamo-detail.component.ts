@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuComponent } from '../../menu/menu-component/menu-component.component';
 
 @Component({
   selector: 'app-prestamo-detail',
   standalone: true,
-  imports: [],
+  imports: [MenuComponent],
   templateUrl: './prestamo-detail.component.html',
   styleUrl: './prestamo-detail.component.css'
 })
@@ -15,7 +16,7 @@ export class PrestamoDetailComponent {
 
   openModal(): void {
     this.isOpen = true;
-    
+
   }
 
   closeModal(): void {

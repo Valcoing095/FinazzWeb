@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { PrestamosComponent } from '../../prestamos/prestamos/prestamos.component';
 
+
 @Component({
   selector: 'app-menu-component',
   standalone: true,
@@ -13,7 +14,18 @@ import { PrestamosComponent } from '../../prestamos/prestamos/prestamos.componen
 export class MenuComponent{
   constructor(private router:Router){}
 
+  isMenuOpen = false;
 
+  public isOpen = false;
+
+  openModal(): void {
+    this.isOpen = true;
+
+  }
+
+  closeModal(): void {
+    this.isOpen = false;
+  }
   createClient() {
     this.router.navigate(["create/client"])
   }
@@ -27,6 +39,11 @@ export class MenuComponent{
 
   openViewProfile(){
     this.router.navigate(["profile"])
+  }
+
+  // Función para alternar el estado del menú
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
 }

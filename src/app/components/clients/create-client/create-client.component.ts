@@ -1,5 +1,7 @@
 
 import { Component } from '@angular/core';
+import { MenuComponent } from '../../menu/menu-component/menu-component.component';
+
 // imports de services
 import { ClientService } from '../../../services/clientes/client-service.service'
 // imports para control de formularios
@@ -10,7 +12,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-create-client',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,MenuComponent],
   templateUrl: './create-client.component.html',
   styleUrl: './create-client.component.css'
 })
